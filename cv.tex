@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[left=2.5cm,top=1.7cm,right=2.5cm,bottom=1.8cm]{geometry}
+\usepackage[left=2.4cm,top=1.7cm,right=2.5cm,bottom=1.8cm]{geometry}
 \setlength{\hintscolumnwidth}{2.6cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \usepackage{tikz}
@@ -30,7 +30,7 @@
 % personal data
 \name{Marco}{Martínez Ávila}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{}{28032 Madrid}{Madrid, España}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{28032 Madrid}{Madrid, España}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+34 696619477}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
@@ -58,28 +58,68 @@
 
 \begin{tikzpicture}[remember picture,overlay]
 \fill[color1!30]
-(current page.north west) rectangle ([yshift=-5.5cm]current page.east|-{pic cs:end});
+(current page.north west) rectangle ([yshift=-5.1cm]current page.east|-{pic cs:end});
 \end{tikzpicture}
 
 \makecvtitle
 
-
+\vspace{-1.3ex}
 \section{Educación}
 \cventry{2011-2015}{Grado en Ingeniería en Tecnologías y Servicios de Telecomunicación}{}{}{}{}  % arguments 3 to 6 can be left empty
 \cvitem{}{Escuela Politécnica de Ingeniería de Gijón, Universidad de Oviedo}
-\cventry{2015-actualidad}{Máster en Ingeniería Web}{}{}{}{}
+\cventry{2015-2017}{Máster en Ingeniería Web}{}{}{}{}
 \cvitem{}{Escuela de Ingeniería Informática, Universidad de Oviedo}
-\cventry{2016-actualidad}{Cursos online en la plataforma Udacity}{}{}{}{}
-\cvitem{}{Cursos online 'How to Use Git and GitHub' y 'Developing Android Apps'}
 
 \section{Experiencia}
-\cventry{2015-2016}{Técnico de reparación de dispositivos electrónicos}{}{}{}{\textbf{Alechip Soluciones Informáticas SLU}\newline{}%
-Reparación de todo tipo de averías en smartphones, tablets y ordenadores.\newline{}%
+\cventry{2015-2016}{Técnico de reparación de dispositivos electrónicos}{}{}{}
+{
+	\textbf{Alechip Soluciones Informáticas SLU}\newline{}
+	Reparación de todo tipo de averías en smartphones, tablets y ordenadores.\newline{}
 }
-\cventry{2016-actualidad}{Redactor y analista web}{}{}{}{
-	\textcolor{blue}{\textbf{\href{http://www.justunboxing.com}{Just Unboxing}}} | \textcolor{blue}{\href{http://www.justunboxing.com/author/Marco/}{Perfil personal}}\newline{}%
-	Redactor de artículos de noticias, software, hardware, tutoriales y analista de dipositivos tecnológicos.	
+\cventry{2016-2017}{Redactor y analista web}{}{}{}
+{
+	\textcolor{blue}{\textbf{\href{http://www.justunboxing.com}{Just Unboxing}}} | \textcolor{blue}			{\href{http://www.justunboxing.com/author/Marco/}{Perfil personal}}\newline{}
+	Redactor de artículos de noticias, software, hardware, tutoriales y analista de dipositivos 				tecnológicos.	
 }
+\cventry{2017-actualidad}{Desarrollador de software}{}{}{}
+{
+	\textbf{BQ}\newline{}
+	Desarrollador de aplicaciones web en el área de postventa. Diseño, creación, mantenimiento y mejora 	de APIs REST y GraphQL implementadas con Grails y Groovy.
+}
+
+\section{Cursos}
+\cvitemwithcomment{Udacity}{How to Use Git and GitHub}{}
+\cvitemwithcomment{Udacity}{Developing Android Apps}{}
+\cvitemwithcomment{Udacity}{JavaScript Design Patterns}{}
+\cvitemwithcomment{Udacity}{Introduction to Python Programming}{}
+
+\section{Proyectos personales}
+\cvitemwithcomment{FallApp}{Aplicación Android desarrollada usando el framework Apache Cordova.\newline{}
+Monitoriza, detecta y envía alertas ante caídas al tener el smaprtphone en\newline{}
+el bolsillo. Diseñada para su uso por personas de tercera edad.\newline{}
+\textcolor{blue}{\textbf{\href{https://github.com/marcojonudo/FallApp}{Enlace a GitHub}}}}{}
+
+\cvitemwithcomment{ZowiApprende}{Aplicación Android nativa desarrollada con Java. Permite controlar un\newline{}
+robot con placa base Arduino (Zowi, de BQ), enviando y recibiendo\newline{}
+comandos a través de Bluetooth. El objetivo principal de la misma fue\newline{}
+hacer posible que niños de Educación Infantil aprendieran diviertiéndose,\newline{}
+disponiendo de diferentes tipos de actividades contextualizadas en un\newline{}
+trimestre escolar. Actualmente en uso por una maestra de Gijón\newline{}
+\textcolor{blue}{\textbf{\href{https://github.com/marcojonudo/ZowiApp}{Enlace a GitHub}}}}{}
+
+\cvitemwithcomment{ZPL Label Api}{API implementada con Python y Flask, usada para generar código ZPL\newline{}
+(propio de las impresoras Zebra) a partir de información legible\newline{}
+almacenada en JSON en una base de datos Mongo. Funcionalidad\newline{}
+conseguida mediante un algoritmo recursivo, primando ante todo la\newline{}
+rapidez a la hora de modificar datos de las etiquetas.\newline{}
+Actualmente en progreso.\newline{}
+\textcolor{blue}{\textbf{\href{https://github.com/marcojonudo/zpl_label_api}{Enlace a GitHub}}}}{}
+
+\cvitemwithcomment{Desarrollos variados en Grails y Groovy}{Varios proyectos mostrando algunas de las funcionalidades y potencial de\newline{}
+estas tecnologías. Cabe destacar una nueva implementación de la\newline{}
+estructura if-else if-else usando un algoritmo recursivo y una lista de\newline{}
+Closures (lambdas), binding automático de datos o validaciones\newline{}personalizadas y escalables de los parámetros recibidos en una petición.\newline{}
+\textcolor{blue}{\textbf{\href{https://github.com/marcojonudo?tab=repositories}{Enlace a mi GitHub}}}}{}
 
 \section{Idiomas}
 \cvitemwithcomment{Español}{Nativo}{}
@@ -87,11 +127,9 @@ Reparación de todo tipo de averías en smartphones, tablets y ordenadores.\newl
 \cvitemwithcomment{Alemán}{Básico}{Beca de un mes asistiendo a clase en Hamburgo}
 
 \section{Conocimientos informáticos}
-\cvitem{Lenguajes de programación}{Java -Android-, C\#, HTML, CSS, JavaScript, PHP, Arduino}
-\cvitem{Edición de fotos}{Gimp}
-\cvitem{Ofimática}{Microsoft Office, LaTeX$  $}
-\cvitem{Control de versiones}{Git, GitHub, Bitbucket}
-\cvitem{Robótica}{Manipulación y programación del robot Zowi -placa base Arduino-}
+\cvitem{\textbf{Lenguajes y frameworks}}{Grails, Groovy, Java, Python, Android, C\#, HTML, CSS, JavaScript, Arduino.}
+\cvitem{\textbf{Control de versiones}}{Git, GitHub, Bitbucket.}
+\cvitem{\textbf{Robótica}}{Manipulación y programación del robot Zowi -placa base Arduino-.}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
